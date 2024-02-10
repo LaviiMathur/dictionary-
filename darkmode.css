@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2??family=Poppins&family=Patrick+Hand&family=Kite+One&family=Open+Sans:wght@500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: aliceblue;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100dvh;
+  width: 100dvw;
+
+  background: rgb(41, 43, 43);
+}
+main {
+  border: 3px solid #0b6ad0;
+  background-color: #3e3c3c;
+  border-radius: 21px;
+  max-width: 70%;
+  max-height: 90%;
+  padding: 70px 50px;
+}
+.searchBox {
+  display: flex;
+  width: 100%;
+  align-items: self-end;
+  justify-content: space-between;
+}
+.searchBox input {
+  background: transparent;
+  padding: 5px;
+  width: 70%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  border-bottom: 3px solid #0b6ad0;
+}
+.searchBox button,
+.result button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  outline: none;
+  border: none;
+}
+.searchBox button span,
+.result button span,
+.dark_mode span {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.searchBox button :active,
+.result button:active,
+.dark_mode:active {
+  transform: scale(0.9);
+}
+.result {
+  padding: 30px 0px;
+}
+.word {
+  display: flex;
+  justify-content: space-between;
+}
+.word h2 {
+  font-size: 30px;
+  color: #e0e0e0;
+  text-transform: capitalize;
+}
+
+.partOfSpeech {
+  font-family: "Kite One", sans-serif;
+  font-weight: 800;
+  color: #9f9f9f;
+  margin-top: 20px;
+}
+.definition {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.3em;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.example {
+  border-left: 3px solid #0b6ad0;
+  font-family: "Patrick Hand", cursive;
+  width: 60%;
+  margin: 10px 0px 0px 10px;
+  padding-left: 5px;
+  font-style: italic;
+
+  color: #dddbdb;
+}
+.dark_mode {
+  background: transparent;
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 5%;
+  top: 10%;
+}
+@media screen and (max-width: 750px) {
+  main {
+    position: relative;
+    width: 80%;
+    height: 85%;
+    top: 5%;
+    padding: 80px 25px;
+  }
+  .searchBox {
+    justify-content: space-between;
+  }
+  .searchBox input {
+    padding: 3px;
+    font-size: 20px;
+  }
+  .searchBox button span,
+  .result button span,
+  .dark_mode span {
+    font-size: 1.8rem;
+  }
+  ::placeholder {
+    font-size: 15px;
+  }
+  .word h2 {
+    font-size: x-large;
+  }
+  .partOfSpeech {
+    font-size: 15px;
+  }
+  .example {
+    width: 80%;
+  }
+  .dark_mode {
+    top: 5%;
+    right: 10%;
+  }
+}
